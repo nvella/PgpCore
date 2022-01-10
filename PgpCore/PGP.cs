@@ -3983,6 +3983,11 @@ namespace PgpCore
             await Task.Run(() => GenerateKey(publicKeyFilePath, privateKeyFilePath, username, password, strength, certainty, emitVersion));
         }
 
+        public async Task GenerateKeyAsync(Stream publicKeyStream, Stream privateKeyStream, string username = null, string password = null, int strength = 1024, int certainty = 8, bool armor = true, bool emitVersion = true)
+        {
+            await Task.Run(() => GenerateKey(publicKeyStream, privateKeyStream, username, password, strength, certainty, emitVersion));
+        }
+
         public void GenerateKey(string publicKeyFilePath, string privateKeyFilePath, string username = null, string password = null, int strength = 1024, int certainty = 8, bool emitVersion = true)
         {
             if (String.IsNullOrEmpty(publicKeyFilePath))
