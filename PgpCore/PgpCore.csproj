@@ -25,9 +25,9 @@
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>PgpCoreKey.pfx</AssemblyOriginatorKeyFile>
-    <DelaySign>false</DelaySign>
+    <SignAssembly>false</SignAssembly>
+    <!--<AssemblyOriginatorKeyFile>PgpCoreKey.pfx</AssemblyOriginatorKeyFile>
+    <DelaySign>false</DelaySign>-->
   </PropertyGroup>
 
   <ItemGroup>
